@@ -9,18 +9,18 @@ const Layout = () => {
       <header>
         <div>
           <Link to="/" className="logo">
-            Celulares
+            MUSIMUNDO
           </Link>
           <nav>
             <ul>
               <li>
                 <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
-                  Home
+                  Inicio
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/quienes-somos" className={({ isActive }) => (isActive ? 'active' : '')}>
-                  Quienes somos
+                  Quienes somos?
                 </NavLink>
               </li>
               <li>
@@ -28,7 +28,7 @@ const Layout = () => {
                 <ul className="dropdown-menu">
                   <li>
                     <NavLink to="/productos" className={({ isActive }) => (isActive ? 'active' : '')}>
-                      Ver todos
+                      Todos
                     </NavLink>
                   </li>
                   {marcas.map(marca => (
@@ -42,7 +42,7 @@ const Layout = () => {
               </li>
               <li>
                 <NavLink to="/contacto" className={({ isActive }) => (isActive ? 'active' : '')}>
-                  Contacto
+                  Contactanos
                 </NavLink>
               </li>
             </ul>
@@ -53,7 +53,7 @@ const Layout = () => {
         <Outlet />
       </main>
       <footer>
-        &copy; {new Date().getFullYear()} Celulares. Todos los derechos reservados.
+        &copy; {new Date().getFullYear()} MUSIMUNDO SA. Todos los derechos reservados.
       </footer>
     </>
   );
