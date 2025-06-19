@@ -17,7 +17,7 @@ const Productos = () => {
     <div>
       <h2>Productos {marcaNombre ? `- ${marcaNombre}` : ''}</h2>
       {filteredCelulares.length === 0 ? (
-        <p>No hay celulares para esta marca.</p>
+        <p>No hay celulares de esta marca</p>
       ) : (
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px' }}>
           {filteredCelulares.map(celular => (

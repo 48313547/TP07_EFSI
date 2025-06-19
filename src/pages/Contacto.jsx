@@ -13,15 +13,15 @@ const Contacto = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Formulario enviado (simulado). Gracias por contactarnos.');
+    alert('Formulario enviado');
   };
 
   return (
     <div>
-      <h2>Contacto</h2>
+      <h2>Contactanos</h2>
       <form onSubmit={handleSubmit} style={{ maxWidth: '400px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
         <label>
-          Nombre:
+          Nombre y Apellido:
           <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} required />
         </label>
         <label>
