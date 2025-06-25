@@ -1,0 +1,23 @@
+.productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.producto-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: calc(33% - 10px);
+  box-sizing: border-box;
+}
+
+.producto-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.producto-image {
+  width: 100%;
+  border-radius: 4px;
+}

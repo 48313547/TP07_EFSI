@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Contacto.css';
 
 const Contacto = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +20,7 @@ const Contacto = () => {
   return (
     <div>
       <h2>Contactanos</h2>
-      <form onSubmit={handleSubmit} style={{ maxWidth: '400px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+      <form onSubmit={handleSubmit} className="contacto-form">
         <label>
           Nombre y Apellido:
           <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} required />

@@ -1,0 +1,10 @@
+.fotos-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.foto-image {
+  width: 200px;
+  border-radius: 8px;
+}

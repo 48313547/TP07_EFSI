@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { celulares, marcas } from '../../data';
+import './Productos.css';
 
 const Productos = () => {
   const { idMarca } = useParams();
@@ -19,11 +20,11 @@ const Productos = () => {
       {filteredCelulares.length === 0 ? (
         <p>No hay celulares de esta marca</p>
       ) : (
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px' }}>
+        <div className="productos-container">
           {filteredCelulares.map(celular => (
-            <div key={celular.id} style={{ border: '1px solid #ccc', borderRadius: '8px', padding: '10px', width: 'calc(33% - 10px)' }}>
-              <Link to={`/producto/${celular.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                <img src={celular.fotos[0]} alt={celular.nombre} style={{ width: '100%', borderRadius: '4px' }} />
+            <div key={celular.id} className="producto-card">
+              <Link to={`/producto/${celular.id}`} className="producto-link">
+                <img src={celular.fotos[0]} alt={celular.nombre} className="producto-image" />
                 <h4>{celular.nombre}</h4>
                 <p>{celular.descripcion}</p>
                 <p><strong>Precio:</strong> ${celular.precio}</p>
