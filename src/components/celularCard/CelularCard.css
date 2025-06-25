@@ -1,0 +1,12 @@
+.celular-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: calc(33% - 10px);
+  box-sizing: border-box;
+}
+
+.celular-image {
+  width: 100%;
+  border-radius: 4px;
+}

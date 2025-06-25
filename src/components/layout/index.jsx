@@ -1,47 +1,55 @@
-import React from 'react';
-import { Link, NavLink, Outlet } from 'react-router-dom';
-import { marcas } from '../data';
-import './Layout.css';
+import React from "react";
+import { Link, NavLink, Outlet } from "react-router-dom";
+import { marcas } from "../../data";
+import "./Layout.css";
+
+const getActiveClass = ({ isActive }) => (isActive ? "active" : "");
 
 const Layout = () => {
   return (
     <>
       <header>
-        <div>
+        <div className="header-container">
+          <div>
           <Link to="/" className="logo">
             MUSIMUNDO
           </Link>
+          </div>
           <nav>
             <ul>
               <li>
-                <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
+                <NavLink to="/" end className={getActiveClass}>
                   Inicio
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/quienes-somos" className={({ isActive }) => (isActive ? 'active' : '')}>
+                <NavLink to="/quienes-somos" className={getActiveClass}>
                   Quienes somos?
                 </NavLink>
               </li>
-              <li>
+              <li className="dropdown">
                 <span className="dropdown-label">Productos ▼</span>
                 <ul className="dropdown-menu">
                   <li>
-                    <NavLink to="/productos" className={({ isActive }) => (isActive ? 'active' : '')}>
+                    <NavLink to="/productos" className={getActiveClass}>
                       Todos
                     </NavLink>
                   </li>
-                  {marcas.map(marca => (
+                  {marcas.map((marca) => (
                     <li key={marca.id}>
-                      <NavLink to={`/productos/${marca.id}`} className={({ isActive }) => (isActive ? 'active' : '')}>
+                      <NavLink
+                        to={`/productos/${marca.id}`}
+                        className={getActiveClass}
+                      >
                         {marca.nombre}
                       </NavLink>
                     </li>
                   ))}
                 </ul>
               </li>
+
               <li>
-                <NavLink to="/contacto" className={({ isActive }) => (isActive ? 'active' : '')}>
+                <NavLink to="/contacto" className={getActiveClass}>
                   Contactanos
                 </NavLink>
               </li>
@@ -49,11 +57,13 @@ const Layout = () => {
           </nav>
         </div>
       </header>
+
       <main>
         <Outlet />
       </main>
       <footer>
-        &copy; {new Date().getFullYear()} MUSIMUNDO SA. Todos los derechos reservados.
+        &copy; {new Date().getFullYear()} MUSIMUNDO SA. Todos los derechos
+        reservados.
       </footer>
     </>
   );

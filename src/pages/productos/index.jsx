@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { celulares, marcas } from '../data';
+import { celulares, marcas } from '../../data';
 
 const Productos = () => {
   const { idMarca } = useParams();

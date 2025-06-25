@@ -3,17 +3,23 @@ header {
   background-color: rgb(241, 1, 1);
   padding: 10px 20px;
   border-bottom: 1px solid #ffffff;
-  height: 50px;
   box-sizing: border-box;
 }
 
-header > div {
-  max-width: 900px;
-  margin: 0 auto;
+.header-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 100%;
+  align-items: center;
+}
+
+.musimundo{
+  color: white;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 nav ul {
@@ -24,40 +30,36 @@ nav ul {
   padding: 0;
 }
 
-nav ul li {
+nav li {
   position: relative;
 }
 
-nav ul li > a,
-nav ul li > span {
-  font-weight: normal;
+nav a,
+nav span {
   cursor: pointer;
-  text-decoration: none;
-  color: black;
+  color: #ffffff;
 }
 
-nav ul li > a.active,
-nav ul li > a:hover,
-nav ul li > span:hover {
+nav a.active,
+nav a:hover,
+nav span:hover {
   font-weight: bold;
 }
 
-nav ul li ul {
+
+
+nav li ul {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background-color: white;
-  border: 1px solid #ccc;
+  border: 1px solid #ffffff;
   padding: 5px 10px;
   margin: 0;
   list-style: none;
   min-width: 120px;
   z-index: 1000;
-}
-
-nav ul li:hover > ul {
-  display: block;
 }
 
 main {
@@ -66,9 +68,31 @@ main {
   min-height: calc(100vh - 50px - 30px);
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: red;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin: 0;
+  list-style: none;
+  min-width: 120px;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 footer {
   padding: 10px 20px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #ffffff;
   text-align: center;
   font-size: 14px;
 }
