@@ -14,6 +14,11 @@ const Contacto = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert('Ingresa un mail valido');
+      return;
+    }
     alert('Formulario enviado');
   };
 
