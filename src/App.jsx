@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/TP07_EFSI">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -26,3 +26,4 @@ function App() {
 }
 
 export default App;
+
